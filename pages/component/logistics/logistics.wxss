@@ -1,0 +1,25 @@
+.header{
+  font-size: 32rpx;
+  color: black;
+  margin-left:40rpx;
+  margin-right: 40rpx;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+  border-bottom-color: rgb(243, 243, 243)
+}
+.backgroud{
+ background: rgb(234,234,234);
+ border-radius: 10rpx;
+}
+.logicdetail{
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  padding: 5rpx;
+  color: rgb(78, 78, 78)
+}
+.time{
+  font-size: 26rpx;
+  color: grey;
+  margin-top:-2rpx;
+  padding: 5rpx;
+}

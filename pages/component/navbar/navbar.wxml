@@ -1,0 +1,31 @@
+<!--pages/component/navbar/navbar.wxml-->
+<view class="tabbar clear">
+  <view class="f-l {{num==1?'active':''}}" catchtap="goToIndex">
+    <view class="icon-out">
+      <image wx:if="{{num != 1}}" src="../../../image/12.png"></image>
+      <image wx:if="{{num == 1}}" src="../../../image/11.png"></image>
+    </view>
+    <view>
+      <text>首页</text>
+    </view>
+  </view>
+
+  <view class="f-l {{num==2?'active':''}}" catchtap="goShopCar">
+    <view class="icon-out">
+      <image wx:if="{{num != 2}}" src="../../../image/32.png"></image>
+      <image wx:if="{{num == 2}}" src="../../../image/31.png"></image>
+    </view>
+    <view>
+      <text>购物车</text>
+    </view>
+  </view>
+  <view class="f-l {{num==4?'active':''}}" catchtap="goToMine">
+    <view class="icon-out">
+      <image wx:if="{{num != 4}}" src="../../../image/42.png"></image>
+      <image wx:if="{{num == 4}}" src="../../../image/41.png"></image>
+    </view>
+    <view>
+      <text>我的</text>
+    </view>
+  </view>
+</view>

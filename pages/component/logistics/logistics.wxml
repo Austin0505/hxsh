@@ -1,0 +1,8 @@
+<view class="header" wx:for="{{wlxx}}" wx:key="item.XH">
+<view>{{item.LOGISTICCODE}} (物流单号：{{item.SHIPPERCODE}})</view>
+<view>商品：{{item.SPMC}}</view>
+<view class="backgroud" wx:for="{{item.WLXX}}" wx:for-item="wlmx" wx:key="ACCEPTTIME" >
+<view class="logicdetail">{{wlmx.ACCEPTSTATION}}</view>
+<view class="time">{{wlmx.ACCEPTTIME}}</view>
+</view>
+</view>

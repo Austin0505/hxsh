@@ -1,0 +1,32 @@
+<view class="classify">
+  <!--左侧分类导航栏-->
+  <view class="fixleft">
+    <scroll-view class='left-navbar' scroll-y="true">
+      <view wx:for="{{barlist}}" wx:for-index="bindex" class="{{ currentTab == bindex ? 'active hiddentext' : 'hiddentext' }}" wx:key="unique" bindtap="{{ currentTab != bindex ? 'navbarTap':'' }}" data-tabscreenId="{{item.ddm}}" data-index="{{bindex}}">
+        <view  class="barcontent">
+         <image src="/image/wx{{item.ddm}}.png"  class="baricon"></image>
+         <text class="bartext"> {{item.dmc}}</text>
+        </view>
+        <view wx:for="{{rightTile}}" wx:key="unique" data-hiddenitem="item.ddm" class="tabview-content">
+        <!-- <view 
+        class="{{flag ==bindex?'show':'(selectFlindex==data_index?:tabcontent)'}}"">
+        </view> -->
+        <!-- flag当前点击的下标 -->
+          <view bindtap="selectFl" data-selectddm="{{item.ddm}}" class="{{currentTab ==bindex?'show currentTabView':'hide'}}" data-selectindex="{{index}}" >{{item.dmc}}</view>
+        </view>
+      </view>
+
+    </scroll-view>
+  </view>
+  <!-- 右侧分类导航详细信息 -->
+  <scroll-view id="right" scroll-y="true" scroll-top="{{scrollTop}}">
+    <view class="goods-list">
+      <view class="goods" wx:for="{{childrenArray}}" wx:key="unique" bindtap="goGoodsDetail" data-shopid="{{item.dm}}">
+        <image class="img" src="{{item.pic}}"></image>
+        <text>{{item.mc}}</text>
+        <text style="text-align: center;">{{item.price}}元</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<navbar num="{{activeNum}}"></navbar>

@@ -1,0 +1,32 @@
+/* pages/component/navbar/navbar.wxss */
+.tabbar{
+    position: fixed;
+    bottom: 0;
+    height: 108rpx;
+    width: 100%;
+    left: 0;
+    font-size: 20rpx;
+    color: #b7b7b7;
+    background-color: #f5f5f5;
+    /* box-shadow: 0 0 15rpx 2rpx #b7b7b7; */
+    text-align: center;
+    padding-top: 15rpx;
+    z-index: 1000;
+    display: flex;
+}
+.tabbar .f-l{
+    /*width: 33%;*/
+    flex: 1;
+}
+.tabbar .f-l.active{
+    color: #b7b7b7;
+}
+.icon-out{
+    width: 56rpx;
+    height: 56rpx;
+    display: inline-block;
+}
+.tabbar image{
+    width: 56rpx;
+    height: 56rpx;
+}

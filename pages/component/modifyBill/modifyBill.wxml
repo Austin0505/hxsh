@@ -1,0 +1,47 @@
+<!-- 信息部分开始 -->
+<form bindsubmit="formSubmit" report-submit="true">
+<view class = "info">
+<!-- 发票抬头部分 -->
+<view class = "item">
+<text class="text">发票抬头</text>
+<view class = "right">
+<input type="text" name = "name" placeholder="{{name}}" focus="{{focus}}"/>
+</view>
+</view>
+
+<!-- 税号部分 -->
+<view class = "item">
+<text class="text">企业税号</text>
+<view class = "right">
+<input name="taxcode" type="text" placeholder="{{taxcode}}"  focus="{{focus}}"/>
+</view>
+</view>
+
+
+
+<!-- 地址电话部分 -->
+<view class = "item">
+<text class="text">地址电话</text>
+<view class = "right">
+<input name="addrandtel" type="text" placeholder="{{addrandtel}}"  focus="{{focus}}"/>
+</view>
+</view>
+
+<!-- 开户行账号部分 -->
+<view class = "item">
+<text class="text">银行账号</text>
+<view class = "right">
+<input name="bank" type="text" placeholder="{{bank}}"  focus="{{focus}}"/>
+</view>
+</view>
+
+
+
+
+
+</view>
+<!-- 信息部分结束 -->
+<button class = "save" formType="submit" >保存</button>
+<button class = "save" bindtap = "delete">删除</button>
+<button class = "save" bindtap = "cancel">取消</button>
+</form>

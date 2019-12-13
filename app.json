@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/component/cart/cart",
+    "pages/confirmorder/confirmorder",
+    "pages/regist/regist",
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/findpassword/findpassword",
+    "pages/orderlist/orderlist",
+    "pages/main/main",
+    "pages/main/index",
+    "pages/shopList/shopList",
+    "pages/logs/logs",
+    "pages/component/navbar/navbar",
+    "pages/test/test",
+    "pages/shopcar/shopcar",
+    "pages/component/address/address",
+    "pages/component/newAddre/newAddre",
+    "pages/component/modifyAddre/modifyAddre",
+    "pages/component/bill/bill",
+    "pages/component/logistics/logistics",
+    "pages/component/newBill/newBill",
+    "pages/component/modifyBill/modifyBill",
+    "pages/component/details/details",
+    "pages/payresult/payresult"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "职场生活",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#20B2AA",
+    "enablePullDownRefresh": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

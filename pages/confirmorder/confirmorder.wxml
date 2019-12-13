@@ -1,0 +1,108 @@
+<view class="Receiving_address">
+  <view>
+    <view class="name_iphone">天津 天津市 津南区</view>
+    <view class="address">天安门后广场</view>
+    <view class="name_iphone">张三 1313212313</view>
+  </view>
+  <view>
+    <text class="iconfont icon-arrowright"></text>
+  </view>
+</view>
+
+<view class="order_address" bindtap="goToAddAdress">
+  <view class="select_address">
+    <text class="iconfont icon-dizhi"></text> 点击去选择地址
+  </view>
+  <view>
+    <text class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text>
+  </view>
+</view>
+
+<view class="goods_msg">
+  <block wx:for="{{carts}}" wx:key="{{item.dm}}">
+    <view class="goods_content">
+
+      <image src="{{item.pic}}" class="goods_content_img"></image>
+      <view class="goods_content_text">
+        <view class="goods_content_title">{{item.mc}}</view>
+        <view>数量:{{item.num}}</view>
+        <view>价格:{{item.price}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!-- <view>是否开具发票</view>: -->
+<view class="msg_list">
+  <view class="msg_item">
+    <view>开票信息</view>
+  </view>
+
+  <view class="hasbill">
+    <view class="choosebill">
+      <label>是否开具发票：</label>
+      <radio-group bindchange="chooseisbill">
+        <label class="radio" wx:for="{{bill}}" wx:key="{{index}}">
+          <radio value="{{item.hasbill}}" checked="{{item.checked}}" color="#5C8DDA" />{{item.hasbill}}
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <view class="{{isbill=='true'? 'show':'hide'}}">
+    <view>
+      <view class="inovice_content">
+        <view class="name_iphone">天津 天津市 津南区</view>
+        <view class="address">天安门后广场</view>
+        <view class="name_iphone">张三 1313212313</view>
+      </view>
+      <view>
+        <text class="iconfont icon-arrowright"></text>
+      </view>
+    </view>
+
+    <view class="order_address" bindtap="goToInvoice">
+      <view class="select_address">
+        <text class="iconfont icon-dizhi"></text> 点击去选择地址
+      </view>
+      <view>
+        <text class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <view>发票个人公司</view>: -->
+<!-- <view class="{{isbill=='true'? 'show':'hide'}}">
+    <view class="hasbill">
+      <view class="choosebill">
+        <label>发票类型选择：</label>
+        <radio-group bindchange="choosebillType">
+          <label class="radio" wx:for="{{billType}}" wx:key="{{index}}">
+            <radio value="{{item.type}}" checked="{{checked}}" color="#5C8DDA" />{{item.type}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+  </view> -->
+
+<!-- <view class="{{isshowbilltype=='true'? 'show billtypeContent':'hide billtypeContent'}}" bindtap="abc">
+    <view>发票抬头(必填)</view>
+    <input class="inputclass" placeholder-class="placeholder" placeholder="{{isbillType=='false'?'个人':'请输入公司名称'}}" data-model="billname" bindinput='getInputValue' />
+    <view class="{{isbillType=='false'?'hide':'show'}}">
+      <view>税号:</view>
+      <input class="inputclass" data-model="shuihao" bindinput='getInputValue' />
+      <view>地址电话:</view>
+      <input class="inputclass" data-model="phone" bindinput='getInputValue' />
+      <view>开户银行号:</view>
+      <input class="inputclass" data-model="bankname" bindinput='getInputValue' />
+    </view>
+    <view class="electronicinvoice">发票类型:电子发票</view>
+  </view>
+</view> -->
+
+<view class="order_pay">
+  <view class="pay_money">付款
+    <text class="Total_price">￥{{totalPrice}}</text>
+  </view>
+  <view class="submit_order" bindtap="goToPayOrder">提交订单</view>
+</view>

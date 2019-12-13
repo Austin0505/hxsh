@@ -1,0 +1,3 @@
+<!--pages/shopcar/shopcar.wxml-->
+<text>pages/shopcar/shopcar.wxml</text>
+<navbar num="{{activeNum}}"></navbar>

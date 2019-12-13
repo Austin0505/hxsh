@@ -1,0 +1,27 @@
+<!-- <view class = "item" wx:for="{{addresslist}}"  bindtap="toCleanOrder" data-index="{{item.index}}" data-id="{{item.id}}" data-name="{{item.mc}}" data-tel="{{item.dh}}" data-addre="{{item.dz}}"> -->
+<!-- 显示开票信息 -->
+<view class="item">
+<view class = "info">
+<view class="text">发票抬头: 个人</view>
+<view class="text">企业税号: </view>
+<view class="text">地址电话: </view>
+<view class="text">银行账号: </view>
+</view>
+<!-- 修改开票信息 -->
+<!-- <view class = "modify" bindtap="toModifyBill" data-index="{{item.index}}" data-id="{{item.id}}" data-name="{{item.name}}" data-tel="{{item.tel}}" data-area="{{item.area}}"data-addre="{{item.addre}}" data-image="{{item.image}}"    data-areavalue="{{item.areavalue}}" data-addrevalue="{{item.addrevalue}}" data-door="{{item.door}}">
+<image src = "/image/edit.png"
+    mode = "widthFix" bindtap = "detete"/>
+</view>  -->
+<view class = "modify" bindtap="toModifyBill" >
+<image src = "/image/edit.png"
+    mode = "widthFix" bindtap = "detete"/>
+</view>
+</view>
+
+<view class = "add" bindtap = "addBill">
+	<image  class = "left" src = "/image/add6.png"
+    mode = "widthFix" /><view class = "text">新增开票信息</view>
+    <!-- <image class="right" src = "../../images/right.png"
+    mode = "widthFix" /> -->
+</view>
+

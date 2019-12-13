@@ -1,0 +1,44 @@
+<view class="main">
+  <block wx:for="{{shopGoods}}" wx:key="index">
+
+    <view class="goods-box">
+      <image src="{{item.pic}}" class="goods-thumb"></image>
+      <view class="goods-price-outer">
+        <span>价格:</span>
+        <span class="goods-price">{{item.price}}</span>元
+        <view class="goods-name">{{item.mc}}</view>
+      </view>
+    </view>
+    <!-- //中间商品详情、参数、注意事项栏 -->
+    <view class="goods-tab-box">
+      <view class="goods-tab-nav {{curIndex === 0 ?'on':''}}" bindtap="bindTap" data-index="0">商品详情</view>
+      <view class="goods-tab-nav {{curIndex === 1 ?'on':''}}" bindtap="bindTap" data-index="1">产品参数</view>
+      <view class="goods-tab-nav {{curIndex === 2 ?'on':''}}" bindtap="bindTap" data-index="2">注意事项</view>
+      <view class="goods-content">
+        <view wx:if="{{curIndex === 0}}" wx:for="{{decript}}" wx:key="item">
+        <!-- <view wx:if="{{curIndex === 0}}"  wx:key="item"> -->
+           <view>{{item}}</view>
+        </view>
+        <view wx:if="{{curIndex === 1}}">{{item.mc}}</view>
+        <view wx:if="{{curIndex === 2}}">{{item.jyxgxx}}</view>
+      </view>
+    </view>
+
+
+    <!-- 底部购物车按钮栏 -->
+    <view class="goods-operation">
+      <view class="goods-flex">
+        <view class="goods-btnflex">
+          <image class="goods-operation-add" src="../../../image/jianhao.png" bindtap="subCount"></image>
+          <view class="goods-operation-num">数量 {{item.num}}</view>
+          <image class="goods-operation-sub" src="../../../image/jiahao.png" bindtap="addCount">-</image>
+        </view>
+        <view class="goods-carflex">
+          <view class="goods-to-cart" bindtap="addToCart">加入购物车</view>
+          <image src="../../../image/shocar.png" class="goods-cart-img" bindtap="showcart"></image>
+        </view>
+      </view>
+    </view>
+
+  </block>
+</view>

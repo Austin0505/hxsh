@@ -1,0 +1,78 @@
+<!--pages/mine/mine.wxml-->
+<view class="main">
+  <!-- <image src="/image/touxiang.png"></image> -->
+  <view class="header">
+    <view wx:if='{{islogin}}'>
+      <view class="touxiang_left">
+         <image src="/image/touxiang.png"></image>
+         <view class="imgRightText">
+            <view>已登陆</view>
+            <view>{{phone}}</view>
+         </view>
+      </view>
+    </view>
+    <view wx:else>
+      <image src="/image/morentouxiang1.png"></image>
+      <text>未登陆</text>
+    </view>
+    <view class="about">四川航信</view>
+  </view>
+
+  <!-- <view class="address-box">
+    <view class="address-manage">
+      <navigator url="/pages/component/address/address">地址管理</navigator>
+    </view>
+  </view>
+  <view class="address-box">
+    <view class="address-manage">
+      <navigator url="/pages/component/bill/bill">开票信息</navigator>
+    </view>
+  </view> -->
+</view>
+
+<view class="mineList">
+  <view class="mineList-item" bindtap="goToAddress">
+    <view>
+      <text class="iconfont icon-dizhi"></text>
+      <text>地址管理</text>
+    </view>
+    <text class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text>
+  </view>
+  <view class="mineList-item" bindtap="goToOrderList">
+    <view>
+      <text class="iconfont icon-dingdan"></text>
+      <text>订单查询</text>
+    </view>
+    <text class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text>
+  </view>
+  <view class="mineList-item" bindtap="goToInvoice">
+    <view>
+      <text class="iconfont icon-fapiaoguanli"></text>
+      <text>开票信息</text>
+    </view>
+    <text class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text>
+  </view>
+  <view class="mineList-item" bindtap="goToLoginStatus" wx:if="{{islogin}}">
+    <view>
+      <text class="iconfont icon-zhuxiao"></text>
+      <text>注销</text>
+    </view>
+    <text class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text>
+  </view>
+  <navigator url="/pages/login/login" open-type="redirect" wx:else>
+    <view class="mineList-item">
+      <view>
+        <text class="iconfont icon-02"></text>
+        <text>登陆</text>
+      </view>
+      <text class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text>
+    </view>
+  </navigator>
+</view>
+
+
+
+
+
+
+<navbar num="{{activeNum}}"></navbar>

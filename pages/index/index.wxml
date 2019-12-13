@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view class="newest-box">
+  <view class="newest-list" bindtap="sort" wx:for="{{navlist}}" data-ddm="{{item.ddm}}" wx:key="{{item.ddm}}">
+    <image src="/image/wx{{item.ddm}}.png" class="navimg"></image>
+    <view class="newest-text">{{item.dmc}}</view>
+  </view>
+  <!-- <view class="newest-list">
+    <image src="/image/import.png" class="navimg"></image>
+    <view class="newest-text">进口商品</view>
+  </view> -->
+</view>
+<view></view>
+
+<view class="newest-text1">我的商品</view>
+<view class="newest-box">
+  <view class="background">
+    <view class="newest-list1" wx:for="{{hotList}}" wx:key="index" bindtap="hotListButtom" data-hotgoodsid="{{item.dm}}">
+      <image src="{{item.pic}}"></image>
+      <view class="newest-text">{{item.mc}}</view>
+      <view class="newest-text">{{item.price}}元</view>
+    </view>
+  </view>
+</view>
+<view class="newest-text2">新品推荐</view>
+<view class="newest-box">
+  <view class="background">
+    <view class="newest-list1" bindtap="newGoodsbuttom" data-newgoodsid="{{item.dm}}" wx:for="{{list}}" wx:key="item.dm">
+      <image src="{{item.pic}}"></image>
+      <view class="newest-text">{{item.mc}}</view>
+      <view class="newest-text">{{item.price}}元</view>
+    </view>
+  </view>
+</view>
+<navbar num="{{activeNum}}"></navbar>

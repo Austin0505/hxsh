@@ -1,0 +1,14 @@
+<view class="orders-box">
+  <view class="orders">我的订单</view>
+  <view class="orders-list" wx:for="{{orderlist}}" wx:key="item.id">
+    <view class="orders-number">订单编号：{{item.id}}</view>
+    <view class="orders-detail" wx:for="{{item.sps}}" wx:for-item="sps" wx:key="mc">
+      <text style="display:flex;flex-direction:row;justify-content:flex-start;">{{sps.mc}}</text>
+      <text style="display:flex;flex-direction:row;justify-content:flex-end;pading-right:30rpx;">￥{{sps.total}}</text>
+    </view>
+    <view class="orders-footer">
+      <text>合计：￥{{item.total}}</text>
+      <button size="mini" class="orders-btn" bindtap="wlxx">查看物流</button>
+    </view>
+  </view>
+</view>

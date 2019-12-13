@@ -1,0 +1,25 @@
+@import "/pages/login/login.wxss";
+
+.smsCode {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ddd;
+  /* padding-right: 10%; */
+}
+
+.smsCode input {
+  width: 336rpx;
+  border: none;
+}
+
+.smsCode .getSmsCodeBtn {
+  font-size: 30rpx;
+  color: #fff;
+  width: 250rpx;
+  box-sizing: border-box;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-top: 10rpx;
+  margin-right: 0;
+  /* background-color: #fff; */
+}
